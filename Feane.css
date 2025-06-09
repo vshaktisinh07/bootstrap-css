@@ -22,3 +22,22 @@ body {
 #order-online {
   font-family: "Dancing Script", cursive;
 }
+
+.link a {
+  color: white;
+  text-decoration: none;
+}
+
+.link a:hover {
+  color: orange;
+  cursor: pointer;
+}
+
+.link i:hover {
+  color: orange;
+  cursor: pointer;
+}
+
+.icons {
+  color: white;
+}

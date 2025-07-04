@@ -4,8 +4,10 @@
   box-sizing: border-box;
 }
 body {
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
+  font-family: "Fira Sans Condensed", Arial, sans-serif;
+  background: #181818;
 }
 
 .Feane-img {
@@ -13,31 +15,113 @@ body {
   background-size: cover;
   background-position: center;
   height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding-top: 80px;
 }
-
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(2px);
+  z-index: 1;
+}
+.hero-content {
+  z-index: 2;
+  position: relative;
+}
 #Feane {
   font-family: "Dancing Script", cursive;
+  letter-spacing: 2px;
+  font-weight: 700;
 }
-
 #order-online {
   font-family: "Dancing Script", cursive;
+  text-shadow: 2px 2px 8px #000;
 }
-
 .link a {
   color: white;
   text-decoration: none;
+  transition: color 0.2s;
 }
-
 .link a:hover {
   color: orange;
   cursor: pointer;
 }
-
 .link i:hover {
   color: orange;
   cursor: pointer;
+  transform: scale(1.2);
+  transition: 0.2s;
 }
-
 .icons {
   color: white;
+  transition: color 0.2s, transform 0.2s;
+}
+.btn-warning {
+  background: linear-gradient(90deg, #ffb347 0%, #ffcc33 100%);
+  border: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 24px 0 rgba(255, 204, 51, 0.2);
+}
+.btn-warning:hover {
+  background: linear-gradient(90deg, #ffcc33 0%, #ffb347 100%);
+  color: #181818;
+}
+.section-title {
+  font-family: "Dancing Script", cursive;
+  font-size: 2.5rem;
+  color: #ffcc33;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.menu-card img {
+  height: 220px;
+  object-fit: cover;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+.menu-card {
+  border: none;
+  border-radius: 0.5rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.menu-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 8px 32px 0 rgba(255, 204, 51, 0.2);
+}
+.about-section {
+  background: linear-gradient(90deg, #181818 60%, #222 100%);
+}
+.about-section h2 {
+  color: #ffcc33;
+  font-family: "Dancing Script", cursive;
+}
+.about-section ul li {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+.footer {
+  border-top: 2px solid #ffcc33;
+}
+.footer a:hover {
+  color: #ffcc33;
+}
+::-webkit-scrollbar {
+  width: 8px;
+  background: #222;
+}
+::-webkit-scrollbar-thumb {
+  background: #ffcc33;
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .Feane-img {
+    width: 40vh;
+    height: 40vh;
+  }
 }
